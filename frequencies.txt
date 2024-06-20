@@ -1,0 +1,17 @@
+const getMode = (array) => {
+  const counts = {};
+  
+  // Step 1: Initialize an empty object to store frequencies
+  array.forEach(el => {
+    // Step 2: Iterate through each element (el) in the array
+    if (counts[el]) {
+      // Step 3: Check if counts[el] exists (truthy)
+      counts[el] += 1; // Step 4: Increment the count if the element already exists
+    } else {
+      counts[el] = 1; // Step 5: Set the count to 1 if the element doesn't exist
+    }
+  });
+
+  // Step 6: Return the counts object containing frequencies
+  return counts;
+};
